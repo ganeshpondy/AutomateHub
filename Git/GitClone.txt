@@ -1,0 +1,19 @@
+
+time git clone <Git-URL.git>
+time git clone --single-branch -b <branch-name> <Git-URL.git>
+time git clone --single-branch -b <branch-name> --depth 1 <Git-URL.git> <Foler>
+time git clone --single-branch -b <branch-name> --depth 1 --reference <Repo-Already-Downloaded-Path> <Git-URL.git> <Folder>
+
+time git clone --single-branch -b main --depth 1 --reference ~/worspace/kubernets-local/ https://github.com/kubernets/kubernets.git kubernets-ref
+
+
+
+time git clone git@github.com:tensorflow/tensorflow.git
+time git clone --single-branch -b master git@github.com:tensorflow/tensorflow.git tensorflow_branch
+time git clone --single-branch -b master --depth 1 git@github.com:tensorflow/tensorflow.git tensorflow_branch_depth
+
+time git clone --single-branch -b blabla --depth 1 git@github.com:tensorflow/tensorflow.git tensorflow_branch_patch1
+
+time git clone --single-branch -b master --depth 1 --reference tensorflow_branch_depth https://github.com/tensorflow/tensorflow.git tensorflow_branch_reference
+
+https://medium.com/@ganeshpondy/optimizing-git-clone-time-e77e44546b48
