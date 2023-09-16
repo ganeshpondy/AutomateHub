@@ -1,0 +1,53 @@
+Create DynamoDB Table
+aws dynamodb create-table \
+         --region ap-south-1 \
+         --table-name terraform-lock \
+         --attribute-definitions AttributeName=LockID,AttributeType=S \
+         --key-schema AttributeName=LockID,KeyType=HASH \
+         --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1
+
+S3 Backend
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws" 
+      version = "5.16.2"
+    }
+  }
+  
+  # This backend configuration instructs Terraform to store its state in an S3 bucket.
+  backend "s3" {
+    bucket         = "terraform-backend"  # Name of the S3 bucket where the state will be stored.
+    key            = "App10/terraform.tfstate" # Path within the bucket where the state will be read/written.
+    region         = "ap-south-1" # AWS region of the S3 bucket.
+    dynamodb_table = "terraform-lock" # DynamoDB table used for state locking.
+    encrypt        = true  # Ensures the state is encrypted at rest in S3.
+  }
+}
+
+# Configuration for the AWS provider.
+provider "aws" {
+  region  = "ap-south-1"          # AWS region where resources will be provisioned.
+  profile = "terraform-bala"      # AWS CLI profile to use for authentication.
+}
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "5.13.1"
+    }
+  }
+  backend "s3" {
+    bucket         = "terraform-backend"
+    key            = "App10/terraform.tfstate"
+    region         = "ap-south-1"
+    dynamodb_table = "terraform-lock"
+    encrypt        = true
+  }
+}
+
+provider "aws" {
+  region  = "ap-south-1"
+  profile = "terraform-bala" # add User profile name here
+}
