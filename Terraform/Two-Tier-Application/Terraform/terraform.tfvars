@@ -21,7 +21,7 @@ asg_health_check_type = "ELB" #"ELB" or default EC2
 # RDS
 rds_name    = "week3rds"
 db_username = "admin"
-db_password = "Week3Pjt098"
+db_password = ""  # DataBase Password
 
 # CloudFront
 certificate_domain_name = "ganeshpondy.link"
