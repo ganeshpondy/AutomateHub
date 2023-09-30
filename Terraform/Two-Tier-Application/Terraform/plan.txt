@@ -1,0 +1,668 @@
+Acquiring state lock. This may take a few moments...
+module.vpc.data.aws_availability_zones.available_zones: Reading...
+module.ec2.data.aws_ami.latest-amazon-linux-image: Reading...
+module.vpc.data.aws_availability_zones.available_zones: Read complete after 0s [id=ap-south-1]
+module.ec2.data.aws_ami.latest-amazon-linux-image: Read complete after 0s [id=ami-0287a05f0ef0e9d9a]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+   create
+
+Terraform will perform the following actions:
+
+  # module.ec2.aws_instance.myapp-server will be created
+   resource "aws_instance" "myapp-server" {
+      mami                                  = "ami-0287a05f0ef0e9d9a"
+      marn                                  = (known after apply)
+      massociate_public_ip_address          = true
+      mavailability_zone                    = (known after apply)
+      mcpu_core_count                       = (known after apply)
+      mcpu_threads_per_core                 = (known after apply)
+      mdisable_api_stop                     = (known after apply)
+      mdisable_api_termination              = (known after apply)
+      mebs_optimized                        = (known after apply)
+      mget_password_data                    = false
+      mhost_id                              = (known after apply)
+      mhost_resource_group_arn              = (known after apply)
+      miam_instance_profile                 = (known after apply)
+      mid                                   = (known after apply)
+      minstance_initiated_shutdown_behavior = (known after apply)
+      minstance_lifecycle                   = (known after apply)
+      minstance_state                       = (known after apply)
+      minstance_type                        = "t2.micro"
+      mipv6_address_count                   = (known after apply)
+      mipv6_addresses                       = (known after apply)
+      mkey_name                             = "host_key.pub"
+      mmonitoring                           = (known after apply)
+      moutpost_arn                          = (known after apply)
+      mpassword_data                        = (known after apply)
+      mplacement_group                      = (known after apply)
+      mplacement_partition_number           = (known after apply)
+      mprimary_network_interface_id         = (known after apply)
+      mprivate_dns                          = (known after apply)
+      mprivate_ip                           = (known after apply)
+      mpublic_dns                           = (known after apply)
+      mpublic_ip                            = (known after apply)
+      msecondary_private_ips                = (known after apply)
+      msecurity_groups                      = (known after apply)
+      msource_dest_check                    = true
+      mspot_instance_request_id             = (known after apply)
+      msubnet_id                            = (known after apply)
+      mtags                                 = {
+           "Name" = "project-sandeep-server"
+        }
+      mtags_all                             = {
+           "Name" = "project-sandeep-server"
+        }
+      mtenancy                              = (known after apply)
+      muser_data                            = "6cb54f856b4c3451d75411f76885f4cf8810d8e9"
+      muser_data_base64                     = (known after apply)
+      muser_data_replace_on_change          = false
+      mvpc_security_group_ids               = (known after apply)
+
+       capacity_reservation_specification {
+          mcapacity_reservation_preference = (known after apply)
+
+           capacity_reservation_target {
+              mcapacity_reservation_id                 = (known after apply)
+              mcapacity_reservation_resource_group_arn = (known after apply)
+            }
+        }
+
+       cpu_options {
+          mamd_sev_snp      = (known after apply)
+          mcore_count       = (known after apply)
+          mthreads_per_core = (known after apply)
+        }
+
+       ebs_block_device {
+          mdelete_on_termination = (known after apply)
+          mdevice_name           = (known after apply)
+          mencrypted             = (known after apply)
+          miops                  = (known after apply)
+          mkms_key_id            = (known after apply)
+          msnapshot_id           = (known after apply)
+          mtags                  = (known after apply)
+          mthroughput            = (known after apply)
+          mvolume_id             = (known after apply)
+          mvolume_size           = (known after apply)
+          mvolume_type           = (known after apply)
+        }
+
+       enclave_options {
+          menabled = (known after apply)
+        }
+
+       ephemeral_block_device {
+          mdevice_name  = (known after apply)
+          mno_device    = (known after apply)
+          mvirtual_name = (known after apply)
+        }
+
+       instance_market_options {
+          mmarket_type = (known after apply)
+
+           spot_options {
+              minstance_interruption_behavior = (known after apply)
+              mmax_price                      = (known after apply)
+              mspot_instance_type             = (known after apply)
+              mvalid_until                    = (known after apply)
+            }
+        }
+
+       maintenance_options {
+          mauto_recovery = (known after apply)
+        }
+
+       metadata_options {
+          mhttp_endpoint               = (known after apply)
+          mhttp_protocol_ipv6          = (known after apply)
+          mhttp_put_response_hop_limit = (known after apply)
+          mhttp_tokens                 = (known after apply)
+          minstance_metadata_tags      = (known after apply)
+        }
+
+       network_interface {
+          mdelete_on_termination = (known after apply)
+          mdevice_index          = (known after apply)
+          mnetwork_card_index    = (known after apply)
+          mnetwork_interface_id  = (known after apply)
+        }
+
+       private_dns_name_options {
+          menable_resource_name_dns_a_record    = (known after apply)
+          menable_resource_name_dns_aaaa_record = (known after apply)
+          mhostname_type                        = (known after apply)
+        }
+
+       root_block_device {
+          mdelete_on_termination = (known after apply)
+          mdevice_name           = (known after apply)
+          mencrypted             = (known after apply)
+          miops                  = (known after apply)
+          mkms_key_id            = (known after apply)
+          mtags                  = (known after apply)
+          mthroughput            = (known after apply)
+          mvolume_id             = (known after apply)
+          mvolume_size           = (known after apply)
+          mvolume_type           = (known after apply)
+        }
+    }
+
+  # module.key-pair.aws_key_pair.key_pair will be created
+   resource "aws_key_pair" "key_pair" {
+      marn             = (known after apply)
+      mfingerprint     = (known after apply)
+      mid              = (known after apply)
+      mkey_name        = "host_key.pub"
+      mkey_name_prefix = (known after apply)
+      mkey_pair_id     = (known after apply)
+      mkey_type        = (known after apply)
+      mpublic_key      = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDQ7h+nG/ELkbaIKoy5/qvr9cJq1YvPECKGzzPFw/plsdk7WAn355Ag5zs9Q2cs6XnfVCWm3jSPsT9BjO51W86ieSkLtXexj6fIWj0EFyCLFBy/TN37IfHrlLGGJX5yg/zbqaXhhiUw4738orGGcgFWIVcOQWVHtezsMomIlOMCrJjWREns26qUIAGF2MG2rLiltYv+LcgSMRlWyKoj3GadmwJiMy+/fvJo/XaelIwGcaCZW/2VHI71DiPob6MlKK2va7A7X3Z4BE+sDJMpwPZ9mFhUSEqaI+TCEF5E1Y9Ymyr9AudXXQfilpbVg04+kaBI1uI2mCmelD08cT5uQaq4J514KwRWIWs37epxJXmtME0GscW2Tavur2P1A0fiM1uZa1lJ82aqoJW3J22dIXmK5jjqfTt3ewmZ1lgDIrjVP4ucRLCNycnwsnuAB7UkBmZcNgbXxacQw3Zg4k03WiOpIU0yEl+ziZ3KhvN8Q/qjXq252A4FACq29v02XIl51M1QLlI89Q1Vl7/CYm3oNl9LFMJN5Gd0zdWP44ZpZKjxyu/FBbG9Io2Upj0c71t1gV/GRghUv7AoFcXyCCgAqrLJsLeu5r/OIGPzIYHktucxx3kZNHpjnbNBu0aqQAkGyZMcSs/v7HO3TBmHp+hsB5v+62mLXnNkaOP3kX5m9eqhlQ== balavg@W10CBSHBL3"
+      mtags_all        = (known after apply)
+    }
+
+  # module.nat.aws_eip.eip-nat-a will be created
+   resource "aws_eip" "eip-nat-a" {
+      mallocation_id        = (known after apply)
+      massociation_id       = (known after apply)
+      mcarrier_ip           = (known after apply)
+      mcustomer_owned_ip    = (known after apply)
+      mdomain               = "vpc"
+      mid                   = (known after apply)
+      minstance             = (known after apply)
+      mnetwork_border_group = (known after apply)
+      mnetwork_interface    = (known after apply)
+      mprivate_dns          = (known after apply)
+      mprivate_ip           = (known after apply)
+      mpublic_dns           = (known after apply)
+      mpublic_ip            = (known after apply)
+      mpublic_ipv4_pool     = (known after apply)
+      mtags                 = {
+           "Name"    = "project-sandeep_eip-nat-a"
+           "Project" = "project-sandeep"
+        }
+      mtags_all             = {
+           "Name"    = "project-sandeep_eip-nat-a"
+           "Project" = "project-sandeep"
+        }
+      mvpc                  = (known after apply)
+    }
+
+  # module.nat.aws_eip.eip-nat-b will be created
+   resource "aws_eip" "eip-nat-b" {
+      mallocation_id        = (known after apply)
+      massociation_id       = (known after apply)
+      mcarrier_ip           = (known after apply)
+      mcustomer_owned_ip    = (known after apply)
+      mdomain               = "vpc"
+      mid                   = (known after apply)
+      minstance             = (known after apply)
+      mnetwork_border_group = (known after apply)
+      mnetwork_interface    = (known after apply)
+      mprivate_dns          = (known after apply)
+      mprivate_ip           = (known after apply)
+      mpublic_dns           = (known after apply)
+      mpublic_ip            = (known after apply)
+      mpublic_ipv4_pool     = (known after apply)
+      mtags                 = {
+           "Name"    = "project-sandeep_eip-nat-b"
+           "Project" = "project-sandeep"
+        }
+      mtags_all             = {
+           "Name"    = "project-sandeep_eip-nat-b"
+           "Project" = "project-sandeep"
+        }
+      mvpc                  = (known after apply)
+    }
+
+  # module.nat.aws_nat_gateway.nat-az1 will be created
+   resource "aws_nat_gateway" "nat-az1" {
+      mallocation_id                      = (known after apply)
+      massociation_id                     = (known after apply)
+      mconnectivity_type                  = "public"
+      mid                                 = (known after apply)
+      mnetwork_interface_id               = (known after apply)
+      mprivate_ip                         = (known after apply)
+      mpublic_ip                          = (known after apply)
+      msecondary_private_ip_address_count = (known after apply)
+      msecondary_private_ip_addresses     = (known after apply)
+      msubnet_id                          = (known after apply)
+      mtags                               = {
+           "Name"    = "project-sandeep_nat-az1"
+           "Project" = "project-sandeep"
+        }
+      mtags_all                           = {
+           "Name"    = "project-sandeep_nat-az1"
+           "Project" = "project-sandeep"
+        }
+    }
+
+  # module.nat.aws_nat_gateway.nat-az2 will be created
+   resource "aws_nat_gateway" "nat-az2" {
+      mallocation_id                      = (known after apply)
+      massociation_id                     = (known after apply)
+      mconnectivity_type                  = "public"
+      mid                                 = (known after apply)
+      mnetwork_interface_id               = (known after apply)
+      mprivate_ip                         = (known after apply)
+      mpublic_ip                          = (known after apply)
+      msecondary_private_ip_address_count = (known after apply)
+      msecondary_private_ip_addresses     = (known after apply)
+      msubnet_id                          = (known after apply)
+      mtags                               = {
+           "Name"    = "project-sandeep_nat-az2"
+           "Project" = "project-sandeep"
+        }
+      mtags_all                           = {
+           "Name"    = "project-sandeep_nat-az2"
+           "Project" = "project-sandeep"
+        }
+    }
+
+  # module.nat.aws_route_table.pri-rt-az1 will be created
+   resource "aws_route_table" "pri-rt-az1" {
+      marn              = (known after apply)
+      mid               = (known after apply)
+      mowner_id         = (known after apply)
+      mpropagating_vgws = (known after apply)
+      mroute            = [
+           {
+               carrier_gateway_id         = ""
+               cidr_block                 = "0.0.0.0/0"
+               core_network_arn           = ""
+               destination_prefix_list_id = ""
+               egress_only_gateway_id     = ""
+               gateway_id                 = ""
+               ipv6_cidr_block            = ""
+               local_gateway_id           = ""
+               nat_gateway_id             = (known after apply)
+               network_interface_id       = ""
+               transit_gateway_id         = ""
+               vpc_endpoint_id            = ""
+               vpc_peering_connection_id  = ""
+            },
+        ]
+      mtags             = {
+           "Name"    = "project-sandeep_pri-rt-az1"
+           "Project" = "project-sandeep"
+        }
+      mtags_all         = {
+           "Name"    = "project-sandeep_pri-rt-az1"
+           "Project" = "project-sandeep"
+        }
+      mvpc_id           = (known after apply)
+    }
+
+  # module.nat.aws_route_table.pri-rt-az2 will be created
+   resource "aws_route_table" "pri-rt-az2" {
+      marn              = (known after apply)
+      mid               = (known after apply)
+      mowner_id         = (known after apply)
+      mpropagating_vgws = (known after apply)
+      mroute            = [
+           {
+               carrier_gateway_id         = ""
+               cidr_block                 = "0.0.0.0/0"
+               core_network_arn           = ""
+               destination_prefix_list_id = ""
+               egress_only_gateway_id     = ""
+               gateway_id                 = ""
+               ipv6_cidr_block            = ""
+               local_gateway_id           = ""
+               nat_gateway_id             = (known after apply)
+               network_interface_id       = ""
+               transit_gateway_id         = ""
+               vpc_endpoint_id            = ""
+               vpc_peering_connection_id  = ""
+            },
+        ]
+      mtags             = {
+           "Name"    = "project-sandeep_pri-rt-az2"
+           "Project" = "project-sandeep"
+        }
+      mtags_all         = {
+           "Name"    = "project-sandeep_pri-rt-az2"
+           "Project" = "project-sandeep"
+        }
+      mvpc_id           = (known after apply)
+    }
+
+  # module.nat.aws_route_table_association.pri-sub-3a-with-pri-rt-az1 will be created
+   resource "aws_route_table_association" "pri-sub-3a-with-pri-rt-az1" {
+      mid             = (known after apply)
+      mroute_table_id = (known after apply)
+      msubnet_id      = (known after apply)
+    }
+
+  # module.nat.aws_route_table_association.pri-sub-4b-with-pri-rt-az2 will be created
+   resource "aws_route_table_association" "pri-sub-4b-with-pri-rt-az2" {
+      mid             = (known after apply)
+      mroute_table_id = (known after apply)
+      msubnet_id      = (known after apply)
+    }
+
+  # module.security-group.aws_security_group.webserver_sg will be created
+   resource "aws_security_group" "webserver_sg" {
+      marn                    = (known after apply)
+      mdescription            = "enable http/https access on port 80 for elb sg"
+      megress                 = [
+           {
+               cidr_blocks      = [
+                   "0.0.0.0/0",
+                ]
+               description      = ""
+               from_port        = 0
+               ipv6_cidr_blocks = []
+               prefix_list_ids  = []
+               protocol         = "-1"
+               security_groups  = []
+               self             = false
+               to_port          = 0
+            },
+        ]
+      mid                     = (known after apply)
+      mingress                = [
+           {
+               cidr_blocks      = [
+                   "0.0.0.0/0",
+                ]
+               description      = "http access"
+               from_port        = 80
+               ipv6_cidr_blocks = []
+               prefix_list_ids  = []
+               protocol         = "tcp"
+               security_groups  = []
+               self             = false
+               to_port          = 80
+            },
+           {
+               cidr_blocks      = [
+                   "0.0.0.0/0",
+                ]
+               description      = "ssh access"
+               from_port        = 22
+               ipv6_cidr_blocks = []
+               prefix_list_ids  = []
+               protocol         = "tcp"
+               security_groups  = []
+               self             = false
+               to_port          = 22
+            },
+        ]
+      mname                   = "webserver_sg"
+      mname_prefix            = (known after apply)
+      mowner_id               = (known after apply)
+      mrevoke_rules_on_delete = false
+      mtags                   = {
+           "Name"    = "webserver_sg"
+           "Project" = "project-sandeep"
+        }
+      mtags_all               = {
+           "Name"    = "webserver_sg"
+           "Project" = "project-sandeep"
+        }
+      mvpc_id                 = (known after apply)
+    }
+
+  # module.vpc.aws_internet_gateway.igw will be created
+   resource "aws_internet_gateway" "igw" {
+      marn      = (known after apply)
+      mid       = (known after apply)
+      mowner_id = (known after apply)
+      mtags     = {
+           "Name"    = "project-sandeep_igw"
+           "Project" = "project-sandeep"
+        }
+      mtags_all = {
+           "Name"    = "project-sandeep_igw"
+           "Project" = "project-sandeep"
+        }
+      mvpc_id   = (known after apply)
+    }
+
+  # module.vpc.aws_route_table.public_route_table will be created
+   resource "aws_route_table" "public_route_table" {
+      marn              = (known after apply)
+      mid               = (known after apply)
+      mowner_id         = (known after apply)
+      mpropagating_vgws = (known after apply)
+      mroute            = [
+           {
+               carrier_gateway_id         = ""
+               cidr_block                 = "0.0.0.0/0"
+               core_network_arn           = ""
+               destination_prefix_list_id = ""
+               egress_only_gateway_id     = ""
+               gateway_id                 = (known after apply)
+               ipv6_cidr_block            = ""
+               local_gateway_id           = ""
+               nat_gateway_id             = ""
+               network_interface_id       = ""
+               transit_gateway_id         = ""
+               vpc_endpoint_id            = ""
+               vpc_peering_connection_id  = ""
+            },
+        ]
+      mtags             = {
+           "Name"    = "project-sandeep_route_table"
+           "Project" = "project-sandeep"
+        }
+      mtags_all         = {
+           "Name"    = "project-sandeep_route_table"
+           "Project" = "project-sandeep"
+        }
+      mvpc_id           = (known after apply)
+    }
+
+  # module.vpc.aws_route_table_association.pub-sub-1a_route_table_association will be created
+   resource "aws_route_table_association" "pub-sub-1a_route_table_association" {
+      mid             = (known after apply)
+      mroute_table_id = (known after apply)
+      msubnet_id      = (known after apply)
+    }
+
+  # module.vpc.aws_route_table_association.pub-sub-2-b_route_table_association will be created
+   resource "aws_route_table_association" "pub-sub-2-b_route_table_association" {
+      mid             = (known after apply)
+      mroute_table_id = (known after apply)
+      msubnet_id      = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.pri_sub_3a will be created
+   resource "aws_subnet" "pri_sub_3a" {
+      marn                                            = (known after apply)
+      massign_ipv6_address_on_creation                = false
+      mavailability_zone                              = "ap-south-1a"
+      mavailability_zone_id                           = (known after apply)
+      mcidr_block                                     = "172.0.30.0/24"
+      menable_dns64                                   = false
+      menable_resource_name_dns_a_record_on_launch    = false
+      menable_resource_name_dns_aaaa_record_on_launch = false
+      mid                                             = (known after apply)
+      mipv6_cidr_block_association_id                 = (known after apply)
+      mipv6_native                                    = false
+      mmap_public_ip_on_launch                        = false
+      mowner_id                                       = (known after apply)
+      mprivate_dns_hostname_type_on_launch            = (known after apply)
+      mtags                                           = {
+           "Name"    = "pri_sub_3a"
+           "Project" = "project-sandeep"
+        }
+      mtags_all                                       = {
+           "Name"    = "pri_sub_3a"
+           "Project" = "project-sandeep"
+        }
+      mvpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.pri_sub_4b will be created
+   resource "aws_subnet" "pri_sub_4b" {
+      marn                                            = (known after apply)
+      massign_ipv6_address_on_creation                = false
+      mavailability_zone                              = "ap-south-1b"
+      mavailability_zone_id                           = (known after apply)
+      mcidr_block                                     = "172.0.40.0/24"
+      menable_dns64                                   = false
+      menable_resource_name_dns_a_record_on_launch    = false
+      menable_resource_name_dns_aaaa_record_on_launch = false
+      mid                                             = (known after apply)
+      mipv6_cidr_block_association_id                 = (known after apply)
+      mipv6_native                                    = false
+      mmap_public_ip_on_launch                        = false
+      mowner_id                                       = (known after apply)
+      mprivate_dns_hostname_type_on_launch            = (known after apply)
+      mtags                                           = {
+           "Name"    = "pri_sub_4b"
+           "Project" = "project-sandeep"
+        }
+      mtags_all                                       = {
+           "Name"    = "pri_sub_4b"
+           "Project" = "project-sandeep"
+        }
+      mvpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.pri_sub_5a will be created
+   resource "aws_subnet" "pri_sub_5a" {
+      marn                                            = (known after apply)
+      massign_ipv6_address_on_creation                = false
+      mavailability_zone                              = "ap-south-1a"
+      mavailability_zone_id                           = (known after apply)
+      mcidr_block                                     = "172.0.50.0/24"
+      menable_dns64                                   = false
+      menable_resource_name_dns_a_record_on_launch    = false
+      menable_resource_name_dns_aaaa_record_on_launch = false
+      mid                                             = (known after apply)
+      mipv6_cidr_block_association_id                 = (known after apply)
+      mipv6_native                                    = false
+      mmap_public_ip_on_launch                        = false
+      mowner_id                                       = (known after apply)
+      mprivate_dns_hostname_type_on_launch            = (known after apply)
+      mtags                                           = {
+           "Name"    = "pri_sub_5a"
+           "Project" = "project-sandeep"
+        }
+      mtags_all                                       = {
+           "Name"    = "pri_sub_5a"
+           "Project" = "project-sandeep"
+        }
+      mvpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.pri_sub_6b will be created
+   resource "aws_subnet" "pri_sub_6b" {
+      marn                                            = (known after apply)
+      massign_ipv6_address_on_creation                = false
+      mavailability_zone                              = "ap-south-1b"
+      mavailability_zone_id                           = (known after apply)
+      mcidr_block                                     = "172.0.60.0/24"
+      menable_dns64                                   = false
+      menable_resource_name_dns_a_record_on_launch    = false
+      menable_resource_name_dns_aaaa_record_on_launch = false
+      mid                                             = (known after apply)
+      mipv6_cidr_block_association_id                 = (known after apply)
+      mipv6_native                                    = false
+      mmap_public_ip_on_launch                        = false
+      mowner_id                                       = (known after apply)
+      mprivate_dns_hostname_type_on_launch            = (known after apply)
+      mtags                                           = {
+           "Name"    = "pri_sub_6b"
+           "Project" = "project-sandeep"
+        }
+      mtags_all                                       = {
+           "Name"    = "pri_sub_6b"
+           "Project" = "project-sandeep"
+        }
+      mvpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.pub_sub_1a will be created
+   resource "aws_subnet" "pub_sub_1a" {
+      marn                                            = (known after apply)
+      massign_ipv6_address_on_creation                = false
+      mavailability_zone                              = "ap-south-1a"
+      mavailability_zone_id                           = (known after apply)
+      mcidr_block                                     = "172.0.10.0/24"
+      menable_dns64                                   = false
+      menable_resource_name_dns_a_record_on_launch    = false
+      menable_resource_name_dns_aaaa_record_on_launch = false
+      mid                                             = (known after apply)
+      mipv6_cidr_block_association_id                 = (known after apply)
+      mipv6_native                                    = false
+      mmap_public_ip_on_launch                        = true
+      mowner_id                                       = (known after apply)
+      mprivate_dns_hostname_type_on_launch            = (known after apply)
+      mtags                                           = {
+           "Name"    = "pub_sub_1a"
+           "Project" = "project-sandeep"
+        }
+      mtags_all                                       = {
+           "Name"    = "pub_sub_1a"
+           "Project" = "project-sandeep"
+        }
+      mvpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.pub_sub_2b will be created
+   resource "aws_subnet" "pub_sub_2b" {
+      marn                                            = (known after apply)
+      massign_ipv6_address_on_creation                = false
+      mavailability_zone                              = "ap-south-1b"
+      mavailability_zone_id                           = (known after apply)
+      mcidr_block                                     = "172.0.20.0/24"
+      menable_dns64                                   = false
+      menable_resource_name_dns_a_record_on_launch    = false
+      menable_resource_name_dns_aaaa_record_on_launch = false
+      mid                                             = (known after apply)
+      mipv6_cidr_block_association_id                 = (known after apply)
+      mipv6_native                                    = false
+      mmap_public_ip_on_launch                        = true
+      mowner_id                                       = (known after apply)
+      mprivate_dns_hostname_type_on_launch            = (known after apply)
+      mtags                                           = {
+           "Name"    = "pub_sub_2b"
+           "Project" = "project-sandeep"
+        }
+      mtags_all                                       = {
+           "Name"    = "pub_sub_2b"
+           "Project" = "project-sandeep"
+        }
+      mvpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_vpc.vpc will be created
+   resource "aws_vpc" "vpc" {
+      marn                                  = (known after apply)
+      mcidr_block                           = "172.0.0.0/16"
+      mdefault_network_acl_id               = (known after apply)
+      mdefault_route_table_id               = (known after apply)
+      mdefault_security_group_id            = (known after apply)
+      mdhcp_options_id                      = (known after apply)
+      menable_dns_hostnames                 = true
+      menable_dns_support                   = true
+      menable_network_address_usage_metrics = (known after apply)
+      mid                                   = (known after apply)
+      minstance_tenancy                     = "default"
+      mipv6_association_id                  = (known after apply)
+      mipv6_cidr_block                      = (known after apply)
+      mipv6_cidr_block_network_border_group = (known after apply)
+      mmain_route_table_id                  = (known after apply)
+      mowner_id                             = (known after apply)
+      mtags                                 = {
+           "Name"    = "project-sandeep_vpc"
+           "Project" = "project-sandeep"
+        }
+      mtags_all                             = {
+           "Name"    = "project-sandeep_vpc"
+           "Project" = "project-sandeep"
+        }
+    }
+
+Plan: 22 to add, 0 to change, 0 to destroy.
+[90m
+─────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
+Releasing state lock. This may take a few moments...
